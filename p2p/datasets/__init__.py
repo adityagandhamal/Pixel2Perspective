@@ -1,0 +1,15 @@
+from . import (
+    register_isprs_potsdam,
+    register_uavid,
+    register_indraeye,
+    register_cart,
+    register_msrs,
+    register_mvseg,
+    register_acdc,
+    register_semantic_rt,
+    register_mfnet,
+    register_infraparis,
+    register_worldfloods,
+    register_loveda,
+    register_openearthmap,
+)

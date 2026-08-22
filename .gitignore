@@ -1,0 +1,14 @@
+/datasets/
+output/
+results/
+weights/
+*.pth
+*.pt
+wandb/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.DS_Store
