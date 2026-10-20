@@ -1,4 +1,18 @@
-# Pixel2Perspective
+# Pixel2Perspective [ECCVW 2026]
+
+**Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models**
+
+Aditya Gandhamal<sup>2*</sup>, Aniruddh Sikdar<sup>1*</sup>, Arya Kishor<sup>1</sup>, Suresh Sundaram<sup>1</sup>
+
+<sup>1</sup>Department of Aerospace Engineering, Indian Institute of Science, Bengaluru, India<br>
+<sup>2</sup>Kotak IISc AI-ML Centre, Indian Institute of Science, Bengaluru, India<br>
+<sup>*</sup>Equal contribution
+
+**Accepted at the MARS2 Workshop, ECCV 2026**
+
+[[🌐 Project Page](https://aniruddhsikdar1.github.io/publications/pixel2perspective/)] [[📄 Paper](https://openreview.net/pdf?id=DqDTS4Helq)] [[🖼️ Poster](https://drive.google.com/file/d/1ewpxw-fWrNhB_WiQZ6CqMCfK7w-7TCjM/view?usp=sharing)]
+
+![Pixel2Perspective viewpoint, modality and weather taxonomy](assets/teaser.png)
 
 This is the official toolkit for **Pixel2Perspective**, a benchmark for multi-modal and multi-view
 generalization in vision-language models, evaluating open-vocabulary semantic segmentation (OVSS) models
@@ -26,7 +40,7 @@ slant-angle, ground-level — and two sensor modalities (RGB, infrared):
 | Infraparis    | Ground-level | ✓   | ✓  |
 
 This toolkit follows the structure of [MESS](https://github.com/blumenstiel/MESS) and reuses
-[AetherVision-Bench](../AetherVision-Bench)'s conventions, so it is easy to plug into any detectron2-based
+[AetherVision-Bench](https://arxiv.org/abs/2506.03709)'s conventions, so it is easy to plug into any detectron2-based
 (or framework-agnostic) OVSS model.
 
 ## Usage
@@ -86,10 +100,10 @@ data publicly available, and the authors of the evaluated OVSS models for releas
 Accepted at the MARS2 Workshop, ECCV 2026:
 
 ```BibTeX
-@inproceedings{Gandhamal2026Pixel2Perspective,
-  title={{Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models}},
+@inproceedings{gandhamal2026pixel2perspective,
+  title={Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models},
   author={Gandhamal, Aditya and Sikdar, Aniruddh and Kishor, Arya and Sundaram, Suresh},
-  booktitle={MARS2 Workshop, European Conference on Computer Vision (ECCV)},
+  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2nd Workshop on Multimodal Reasoning and Slow Thinking in the Large Model Era: Towards System 2 and Beyond},
   year={2026}
 }
 ```
