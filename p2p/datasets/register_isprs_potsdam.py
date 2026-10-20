@@ -10,7 +10,7 @@ except ImportError:
     from p2p.utils.colormap import colormap
 
 # Bird's-eye-view (BEV) dataset.
-# Dataset page: https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx
+# Dataset page: https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/default.aspx
 CLASSES = (
     'road',
     'building',

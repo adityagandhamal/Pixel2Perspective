@@ -6,7 +6,7 @@ WorldFloods downloads and prepares automatically. The remaining twelve require a
 (see their sections below). For ISPRS Potsdam and UAVid, the preparation scripts then unzip and tile the
 data; for the other ten they only verify the layout.
 
-- ISPRS Potsdam: https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx (Potsdam)
+- ISPRS Potsdam: https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/default.aspx (Potsdam)
 - UAVid: https://uavid.nl (Download -> Semantic Labelling with Images Only)
 - WorldFloods: auto-downloaded via `gdown` (Google Drive folder, see `prepare_worldfloods.py`)
 - IndraEye: https://github.com/airl-iisc/IndraEye (download links: https://bit.ly/indraeye)
@@ -64,7 +64,7 @@ for adding a new dataset.
 
 Registered names: `isprs_potsdam_sem_seg_test_rgb`, `isprs_potsdam_sem_seg_test_irrg`
 
-Dataset page: https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx. Licence: undefined;
+Dataset page: https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/default.aspx. Licence: undefined;
 citation required, notice of BSF Swissphoto as dataset provider.
 
 ```sh

@@ -50,7 +50,7 @@ def unzip_dataset(dataset_dir, ds_path):
         file_path = dataset_dir / 'Potsdam.zip'
     else:
         raise Exception('Zip not found. Please download the Potsdam dataset from '
-                         'https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx')
+                         'https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/default.aspx')
     print('Unzip dataset...')
     os.system(f'unzip {file_path} -d {ds_path}')
     os.system(f'unzip {ds_path / "Potsdam" / "2_Ortho_RGB.zip"} -d {ds_path}')
