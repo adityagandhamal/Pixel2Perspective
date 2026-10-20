@@ -2,11 +2,11 @@
 
 **Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models**
 
-Aditya Gandhamal<sup>2*</sup>, Aniruddh Sikdar<sup>1*</sup>, Arya Kishor<sup>1</sup>, Suresh Sundaram<sup>1</sup>
+Aditya Gandhamal<sup>2&ast;</sup>, Aniruddh Sikdar<sup>1&ast;</sup>, Arya Kishor<sup>1</sup>, Suresh Sundaram<sup>1</sup>
 
 <sup>1</sup>Department of Aerospace Engineering, Indian Institute of Science, Bengaluru, India<br>
 <sup>2</sup>Kotak IISc AI-ML Centre, Indian Institute of Science, Bengaluru, India<br>
-<sup>*</sup>Equal contribution
+<sup>&ast;</sup>Equal contribution
 
 **Accepted at the MARS2 Workshop, ECCV 2026**
 
@@ -43,11 +43,27 @@ This toolkit follows the structure of [MESS](https://github.com/blumenstiel/MESS
 [AetherVision-Bench](https://arxiv.org/abs/2506.03709)'s conventions, so it is easy to plug into any detectron2-based
 (or framework-agnostic) OVSS model.
 
+## Installation
+
+```sh
+git clone https://github.com/adityagandhamal/Pixel2Perspective.git
+cd Pixel2Perspective
+pip install -e .
+```
+
+To evaluate detectron2-based models, also install detectron2, see [setup_env.sh](setup_env.sh) for a
+reference environment.
+
 ## Usage
 
 Follow [DATASETS.md](DATASETS.md) to download and prepare the datasets, then register them with
 `import p2p.datasets`. If you are using detectron2, datasets register to the detectron2 `DatasetCatalog`;
 otherwise `p2p.utils.catalog.DatasetCatalog` is used.
+
+`eval.sh` is a template: copy it into your model's repository (where `train_net.py`, configs and weights
+live), add `import p2p.datasets` to `train_net.py`, and fill in the `<...>` placeholders.
+
+To evaluate on all datasets, where `train_net.py` is your model's own training script (see [eval.sh](eval.sh)):
 
 ```sh
 conda activate <your_env>
@@ -56,7 +72,7 @@ TEST_DATASETS="isprs_potsdam_sem_seg_test_rgb worldfloods_sem_seg_test_rgb loved
 
 for DATASET in $TEST_DATASETS
 do
- python evaluate.py --eval-only --config-file <your_config>.yaml --num-gpus 1 OUTPUT_DIR output/$DATASET DATASETS.TEST \(\"$DATASET\",\)
+ python train_net.py --eval-only --config-file <your_config>.yaml --num-gpus 1 OUTPUT_DIR output/$DATASET DATASETS.TEST \(\"$DATASET\",\)
 done
 ```
 

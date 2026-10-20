@@ -2,8 +2,9 @@
 
 ## Download datasets
 
-Three datasets download and prepare automatically. The remaining ten require a manual/requested download
-(see their sections below), after which the preparation scripts only verify the layout.
+WorldFloods downloads and prepares automatically. The remaining twelve require a manual/requested download
+(see their sections below). For ISPRS Potsdam and UAVid, the preparation scripts then unzip and tile the
+data; for the other ten they only verify the layout.
 
 - ISPRS Potsdam: https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx (Potsdam)
 - UAVid: https://uavid.nl (Download -> Semantic Labelling with Images Only)
@@ -35,8 +36,8 @@ python -m p2p.prepare_all_datasets --dataset_dir datasets
 python -m p2p.prepare_all_datasets --dataset_dir datasets --stats   # check status only
 ```
 
-ISPRS Potsdam, UAVid and WorldFloods are downloaded/tiled automatically. The other ten datasets must be
-downloaded/requested manually and placed in the layout described below; their preparation scripts only
+WorldFloods is downloaded automatically, and ISPRS Potsdam and UAVid are tiled automatically once
+downloaded. The other ten datasets must be downloaded/requested manually and placed in the layout described below; their preparation scripts only
 verify that layout (see the per-dataset sections).
 
 If you are using another dataset directory than `datasets`, export it as `DETECTRON2_DATASETS` before

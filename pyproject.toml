@@ -35,7 +35,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/aniruddhsikdar/Pixel2Perspective"
+"Homepage" = "https://github.com/adityagandhamal/Pixel2Perspective"
 "Related" = "https://arxiv.org/abs/2506.03709"
 
 [tool.setuptools.packages.find]

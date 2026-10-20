@@ -24,7 +24,8 @@ export DETECTRON2_DATASETS=datasets
 ```python
 import p2p.datasets
 ```
-This registers all 24 dataset/modality/split combinations across the 13 datasets (see
+This registers all 27 dataset/modality/split combinations across the 13 datasets (23 for evaluation, plus
+the 4 training splits used in the fine-tuning settings; see
 [DATASETS.md](DATASETS.md) for the full list of registered names).
 
 ## Evaluation settings used in the paper
@@ -38,7 +39,9 @@ four training regimes, each validated on all 13 datasets:
 4. **OpenEarthMap-trained** — fine-tuned on the bird's-eye-view OpenEarthMap training set, covering both
    RGB and sim-to-real (SAR) setups.
 
-Run all settings with [eval.sh](eval.sh):
+Run all settings with [eval.sh](eval.sh). It is a template: copy it into your model's repository (where
+`train_net.py`, configs and weights live), add `import p2p.datasets` to `train_net.py`, and fill in the
+`<...>` placeholders:
 ```sh
 bash eval.sh
 ```
@@ -57,6 +60,10 @@ done
 
 python p2p/evaluation/pixel2perspective_evaluation.py --model_outputs output/<model_name>
 ```
+
+For code changes required to add a new model to the benchmark (registering datasets, swapping in the
+evaluator), see [mess/GettingStarted.md](https://github.com/blumenstiel/MESS/blob/main/GettingStarted.md),
+whose conventions this toolkit follows.
 
 ## Computing MSRIQ
 
